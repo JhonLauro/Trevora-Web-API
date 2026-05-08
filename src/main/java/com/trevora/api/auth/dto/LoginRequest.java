@@ -1,0 +1,9 @@
+package com.trevora.api.auth.dto;
+
+import jakarta.validation.constraints.NotBlank;
+
+public record LoginRequest(
+        @NotBlank(message = "Email is required.") String identifier,
+        @NotBlank(message = "Password is required.") String password
+) {
+}
